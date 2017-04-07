@@ -55,10 +55,10 @@ class spanishParser(object):
     def getPhrase(self,phrase_type):
         """Return a list of phrases of the given type."""
         parsestr = ''
-        for line in list(self.parse_tree):
+        for line in self.parse_tree:
             for sentence in line:
                 parsestr += str(sentence)
-
+        
         for i in Tree.fromstring(parsestr).subtrees():
             if i.label() == phrase_type:
                 self.phrase_list.append(" ".join(str(x) for x in i.leaves()))
