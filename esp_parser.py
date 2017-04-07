@@ -51,6 +51,7 @@ class spanishParser(object):
         """Set the parse tree property for the given sentence."""
         parser=StanfordParser(model_path=self.esp_model_path, path_to_models_jar=self.path_to_models_jar, path_to_jar=self.path_to_jar, encoding='utf8')
         self.parse_tree = parser.raw_parse(sentence)
+        return self.parse_tree
 
     def getPhrase(self,phrase_type):
         """Return a list of phrases of the given type."""
