@@ -16,8 +16,7 @@ class spanishPOSTagger(object):
     """
 
     def __init__(self, jar, model,tags = []):
-        """Return a Customer object whose name is *name* and starting
-        balance is *balance*."""
+        """Return a spanishPOSTagger object."""
         self.jar = jar
         self.model = model
         self.tags = tags
@@ -42,8 +41,7 @@ class spanishParser(object):
     """
 
     def __init__(self, esp_model_path, path_to_models_jar, path_to_jar):
-        """Return a Customer object whose name is *name* and starting
-        balance is *balance*."""
+        """Return a spanishParser object."""
         self.esp_model_path = esp_model_path
         self.path_to_models_jar = path_to_models_jar
         self.path_to_jar = path_to_jar
