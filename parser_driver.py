@@ -56,7 +56,6 @@ parser = spanishParser(esp_model_path, my_path_to_models_jar, my_path_to_jar)
 
 phrases = []
 for line in sentences:
-    #print 'line:', line
     parser.parse(line)
     phrases += parser.getPhrase('grup.nom')
 
