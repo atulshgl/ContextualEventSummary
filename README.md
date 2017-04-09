@@ -14,5 +14,5 @@ The parser uses NLTK 3.2.2 and Stanford version 3.7.0
         >>> nltk.download()
       ```
   3. The esp_parser.py script uses jar files present in [stanford-postagger-full-2016-10-31](https://nlp.stanford.edu/software/tagger.shtml) and [stanford-parser-full-2016-10-31](https://nlp.stanford.edu/software/lex-parser.shtml).
-  4. Make sure to place unzipped [stanford-postagger-full-2016-10-31](https://nlp.stanford.edu/software/tagger.shtml) and [stanford-parser-full-2016-10-31](https://nlp.stanford.edu/software/lex-parser.shtml) files in the same folder as esp_parser.py script.
+  4. Make sure to place unzipped [stanford-postagger-full-2016-10-31](https://nlp.stanford.edu/software/tagger.shtml) and [stanford-parser-full-2016-10-31](https://nlp.stanford.edu/software/lex-parser.shtml) folders in the same folder as esp_parser.py script.
   5. Extract stanford-parser-3.7.0-models.jar in the stanford-parser-full-2016-10-31 folder.
