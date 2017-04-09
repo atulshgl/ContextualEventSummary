@@ -40,9 +40,11 @@ def get_string_from_ngrams(article):
 s=sys.argv
 text_file=codecs.open(s[1],'r',encoding='utf-8')
 out_file=codecs.open(s[2], 'w', encoding='utf-8')
-ngram=s[3]
+corpus_article_list=codecs.open(s[3],'r',encoding='utf-8')
+ngram=s[4]
 
 article_list=[]
+corpus_articles=[]
 count=0
 for article in text_file:
 	count+=1
@@ -51,12 +53,18 @@ for article in text_file:
 	article=get_string_from_ngrams(article)
 	article=tb(article)
 	article_list.append(article)
+#print "done"
+
+for corpus_article in corpus_article_list:
+	corpus_article=tb(corpus_article)
+	corpus_articles.append(corpus_article)
+
 
 tf_idf_scores=defaultdict(lambda:{})
 article_count=0
 for i, article in enumerate(article_list):
 	article_count+=1
 	#print("Top words in article {}".format(i + 1))
-	scores = {word: tfidf(word, article, article_list) for word in article.words}
+	scores = {word: tfidf(word, article, corpus_articles) for word in article.words}
 	tf_idf_scores["article"+str(article_count)]=scores
 json.dump(tf_idf_scores,out_file,ensure_ascii=False)
