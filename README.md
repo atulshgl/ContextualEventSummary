@@ -20,3 +20,8 @@ The parser uses Python 2.7, NLTK 3.2.2 and Stanford version 3.7.0
      ```{r, engine='sh', count_lines}
       $ python parser_driver.py
      ```
+  7. Install Google NLP dependency
+     ```{r, engine='sh', count_lines}
+      $ pip install --upgrade google-cloud-language
+     ```
+  8. Add google service json file in EntityExtraction folder
