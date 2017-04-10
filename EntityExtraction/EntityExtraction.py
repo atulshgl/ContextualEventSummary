@@ -49,6 +49,35 @@ def phrase_extent_for_head(tokens, head_index):
         end = max(end, child_end)
     return (begin, end)
 
+def phrase_text_for_head_with_restrictedchilds(tokens, text, parent_subj, restrictedChilds):
+    """Returns the entire phrase containing the head token
+    and its dependents excluding .
+    """
+    begin, end = phrase_extent_for_head_with_restrictedchilds(tokens, parent_subj, restrictedChilds)
+    return text[begin:end]
+
+def phrase_extent_for_head_with_restrictedchilds(tokens, head_index, restrictedChilds):
+    """Returns the begin and end offsets for the entire phrase
+    containing the head token and its dependents excluding restricted childs and its dependents.
+    """
+    if type(restrictedChilds) is not list :
+          restrictedChilds = [restrictedChilds]
+
+    begin = tokens[head_index].text_begin
+    end = begin + len(tokens[head_index].text_content)
+    for child in dependents(tokens, head_index):
+        if child not in restrictedChilds:
+            child_begin, child_end = phrase_extent_for_head(tokens, child)
+            begin = min(begin, child_begin)
+            end = max(end, child_end)
+    return (begin, end)
+
+     
+def phrase_text_for_rcmod(tokens,verb):
+        parent_subj = tokens[verb].edge_index 
+        parent_subj_text = phrase_text_for_head_with_restrictedchilds(tokens, text, parent_subj, verb)
+        return parent_subj_text
+
 def find_triples(tokens,
                  left_dependency_label= ['NSUBJ', 'NSUBPASS'],
                  head_part_of_speech='VERB',
@@ -86,6 +115,15 @@ def show_triple(tokens, text, triple):
     # Extract the text for each element of the triple.
     nsubj_text = phrase_text_for_head(tokens, text, nsubj)
     verb_text = tokens[verb].text_content
+    
+    if tokens[verb].edge_label == 'RCMOD':
+        parent_rcmod = phrase_text_for_rcmod(tokens,verb)
+        index = parent_rcmod.find(nsubj_text)
+        if index > -1:
+           nsubj_text = parent_rcmod
+        else:
+           nsubj_text = parent_rcmod + nsubj_text 
+        
     dobj_text = phrase_text_for_head(tokens, text, dobj)
 
     # Pretty-print the triple
@@ -106,7 +144,11 @@ def correctTextBeginPosition(tokens):
 language_client = language.Client()
 
 # The text to analyze
-text = 'En el segundo día de la prueba de pretemporada de Barcelona, Fernando Alonso sufrió un accidente en el turno 3. Fue trasladado por aire al Hospital General de Catalunya en Sant Cugat del Vallès, donde se sometió a escáneres que descubrieron que había sufrido una conmoción cerebral. Después de recuperar la conciencia, algunos periódicos informaron que Alonso sufrió una amnesia retrógrada en la que no tenía recuerdos más allá de 1995 y creía que seguía siendo un piloto de karting'
+# text = u'Según el gobierno estadounidense, las fuerzas de Bashar al Assad usaron este lugar para llevar a cabo el ataque con armas químicas que sufrió la ciudad Khan Sheikhoun, al norte de Siria y controlada por los rebeldes.'
+# The Spanish government lamented the disqualification of opposition leader Henrique Capriles, governor of Miranda, who said it is "one more cause for concern about the situation in Venezuela," according to a statement from the Foreign Ministry. 
+#text = u'El gobierno español lamentó la inhabilitación del líder opositor Henrique Capriles, gobernador de Miranda, que dijo es "un motivo más de preocupación por la situación en Venezuela", según un comunicado del Ministerio de Exteriores.'
+# Russia bombed the garrison of At Tanf in June 2016, but there were no US forces in place at that time
+text = u'Rusia bombardeó la guarnición de At Tanf en junio de 2016, pero no había fuerzas de Estados Unidos en el lugar en esa fecha.'
 document = language_client.document_from_text(text, language='es', encoding=language.Encoding.UTF8)
 extractEntities(document)
 
