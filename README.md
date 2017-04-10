@@ -1,7 +1,7 @@
 # Contextual Event Summary Generation
 
 ## Versions
-The parser uses NLTK 3.2.2 and Stanford version 3.7.0
+The parser uses Python 2.7, NLTK 3.2.2 and Stanford version 3.7.0
 
 ## Installation and Usage
   1. Install nltk:
