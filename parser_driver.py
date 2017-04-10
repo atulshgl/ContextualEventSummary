@@ -4,7 +4,7 @@ import os, codecs, time
 start_time = time.time()
 
 cur_dir = os.path.join(os.path.dirname(__file__))
-input_file = cur_dir + 'article.txt'
+input_file = cur_dir + 'sample.txt'
 output_file = cur_dir + 'phrases.txt'
 
 # Add the jar and model via their path (instead of setting environment variables):
