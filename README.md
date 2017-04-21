@@ -25,3 +25,7 @@ The parser uses Python 2.7, NLTK 3.2.2 and Stanford version 3.7.0
       $ pip install --upgrade google-cloud-language
      ```
   8. Add google service json file in EntityExtraction folder
+  9. Install Watson NLU dependency
+     ```{r, engine='sh', count_lines}
+      $ pip install --upgrade watson-developer-cloud
+     ```
