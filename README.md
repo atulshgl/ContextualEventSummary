@@ -30,10 +30,10 @@ The parser uses Python 2.7, NLTK 3.2.2 and Stanford version 3.7.0
      ```
   9. Install Google Cloud SDK (https://cloud.google.com/sdk/downloads)
   10. Authenticate the Google client
-     ```{r, engine='sh', count_lines}
-      $ gcloud auth application-default login
-     ```
+      ```{r, engine='sh', count_lines}
+       $ gcloud auth application-default login
+      ```
   11. Install Watson NLU dependency
-     ```{r, engine='sh', count_lines}
-      $ pip install --upgrade watson-developer-cloud
-     ```
+      ```{r, engine='sh', count_lines}
+       $ pip install --upgrade watson-developer-cloud
+      ```
