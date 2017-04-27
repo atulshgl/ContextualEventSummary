@@ -30,8 +30,6 @@ La policía antidisturbios volvió a actuar con contundencia ante las manifestac
 El gobierno asegura que estas marchas son parte de una intentona golpista.
 </summary>
 </article>
-</root>
-<root>
 <article>
 <text>
 En menos de tres semanas, las lluvias han vuelto a dejar un saldo trágico en Colombia.
@@ -51,8 +49,6 @@ Los deslaves se produjeron luego de que cayó sobre la ciudad durante una sola n
 Posteriormente, en un mensaje publicado en su cuenta de Twitter, Santos anunció el envío de ayuda a la ciudad.
 </summary>
 </article>
-</root>
-<root>
 <article>
 <text>
 Ya es oficialmente el presidente electo.
@@ -66,8 +62,6 @@ Lasso calificó el último anuncio del ente electoral como un "espectáculo" par
 El Consejo Nacional Electoral (CNE) de Ecuador confirmó en la noche de este martes que el candidato del partido gobernante, Lenin Moreno, ganó las elecciones presidenciales. El candidato derrotado de la oposición, Guillermo Lasso había alegado un fraude en la votación del 2 de abril y exigido un recuento de todos los votos.
 </summary>
 </article>
-</root>
-<root>
 <article>
 <text>
 No fue un ataque islamista, sino que tuvo que ver con especulaciones bursátiles.
@@ -93,8 +87,6 @@ No fue un ataque islamista, sino que tuvo que ver con especulaciones bursátiles
 Eso es lo que creen las autoridades alemanas de la triple explosión que impactó el pasado 11 de abril al autobús en el que viajaba el equipo de fútbol Borussia Dortmund y por la que resultó herido el jugador español Marc Bartra. "Pese al aparente fondo islámico, el ataque no tiene mucho en común con anteriores incidentes de este tipo", comentó por su parte el corresponsal de la BBC en Berlín, Damien McGuinness. Según éstas, con el atentado el hombre pretendía provocar una caída considerable de las acciones en bolsa y lucrarse así con la venta de los títulos al precio establecido previamente al adquirir los derechos de venta de los mismos.
 </summary>
 </article>
-</root>
-<root>
 <article>
 <text>
 <e1>Un policía murió y otros dos resultaron heridos este jueves en un ataque reivindicado por el autodenominado Estado Islámico en la concurrida avenida de los Campos Elíseos de París.</e1>
@@ -123,8 +115,6 @@ El atacante fue identificado como Karim Cheurfi, un francés de 39 años quien e
 Los principales partidos anunciaron que cancelaban sus actos de campaña de este viernes en señal de duelo por el policía fallecido.
 </summary>
 </article>
-</root>
-<root>
 <article>
 <text>
 <e1>El Brexit ha causado un terremoto político en Europa pero hace 70 años, el 18 de abril de 1947, los británicos produjeron un verdadero sacudón internacional cuando generaron el mayor estallido no nuclear de esa era.</e1>
@@ -176,8 +166,6 @@ La operación británica sirvió como una especie de catalizador para una nueva 
 En 1952 el Reino Unido le devolvió la isla a Alemania y se permitió que los habitantes regresaran.
 </summary>
 </article>
-</root>
-<root>
 <article>
 <text>
 El "reino ermitaño" de Corea del Norte es un crisol de contradicciones.
@@ -219,8 +207,6 @@ Algunas inversiones surcoreanas se han concentrado en ciertas partes del país, 
 No obstante, mientras el gobierno del presidente Kim Jong-un siga dispuesto a extraer sacrificios sustanciales de sus habitantes, puede esperarse que Corea del Norte continúe desarrollando su capacidad militar muy por encima de lo que podría esperarse de una nación en sus limitadas condiciones económicas.
 </summary>
 </article>
-</root>
-<root>
 <article>
 <text>
 <e1>El vicepresidente estadounidense, Mike Pence, advirtió este lunes que "la era de la paciencia estratégica" de Washington hacia Corea del Norte ha terminado.</e1>
@@ -255,8 +241,6 @@ El domingo, el asesor de Seguridad Nacional del presidente Donald Trump, H.R. Mc
 A raíz de otro misil lanzado el pasado 5 de abril por Corea del Norte, el Pentágono envió a la península al portaaviones nuclear USS Carl Vinson.
 </summary>
 </article>
-</root>
-<root>
 <article>
 <text>
 Según informó el Ministerio Público de Venezuela este viernes se investigará la muerte de 11 personas en El Valle, Caracas. Algunas murieron electrocutadas y otras por heridas de armas de fuego, indicaron las autoridades.
@@ -273,8 +257,6 @@ Este jueves en la noche, y en la madrugada del viernes, se presentaron disturbio
 Venezuela ha sido escenario de numerosas y violenta protestas este mes después de que el gobierno del presidente Nicolás Maduro inhabilitara al líder de la oposición, Henrique
 </summary>
 </article>
-</root>
-<root>
 <article>
 <text>
 Un episodio muy inusual y racialmente cargado de la campaña del 2016 repentinamente resurgió esta semana cuando un juez federal a quien el presidente Donald Trump criticó de forma repetida fue asignado para escuchar el caso de un hombre que afirma que fue deportado indebidamente.
@@ -300,8 +282,6 @@ Al final del largo toma y dame, Tapper preguntó: "Si usted está diciendo que n
 Los comentarios del año pasado de Trump hacia Curiel (calificó al juez de Indiana como "enemigo" y "mexicano") dieron muestra de algunas de las más fuertes acusaciones de racismo que el entonces candidato enfrentó durante su campaña que le generaron repudio de parte de prominentes republicanos. La propia posición del presidente sobre el DACA ha evolucionado. Trump se comprometió a ponerle fin durante la campaña del 2016, pero el Departamento de Seguridad Nacional ha continuado emitiendo permisos y desde entonces ha hablado sobre lo simpáticos que son quienes se benefician con el DACA: inmigrantes indocumentados traídos a Estados Unidos cuando niños que, en muchos casos, no conocen otro hogar. "Vamos a mostrar un gran corazón", dijo Trump en una conferencia de prensa en febrero. "Les digo que DACA es un tema muy, pero muy difícil para mí".
 </summary>
 </article>
-</root>
-<root>
 <article>
 <text>
 Carente de sueño, la mente empieza a engañarte. Exhausto, el cuerpo pide parar. Pero Jacob Zurl continúa. Debe hacerlo. Los récords solo pueden romperse cuando el espíritu se rehusa a doblegarse.
@@ -366,8 +346,6 @@ Los 90 minutos de rutinas de fortalecimiento en el gimnasio tres veces por seman
 El ciclista extremo vive para alcanzar lo impensable: atravesar los Himalayas en bicicleta, en un tiempo récord de 39 horas, estableciendo nuevas marcas en grandes altitudes.Cuando se está complicando y quiero escuchar música y no hay, es un problema para mí”, dice Zurl, que ha estado practicando cerca de 20 horas por semana preparándose para su viaje, enfocándose más en la velocidad que en la resistencia. Él dice que tomará siestas de pocos minutos, cuando el clima lo permita y, cuando la naturaleza haga su llamado, se bajará de su bicicleta.
 </summary>
 </article>
-</root>
-<root>
 <article>
 <text>
 La leyenda del Barcelona, Xavi Hernández, jugó con Lionel Messi durante más de una década, asegurando alguna vez que "no hay herederos" para el trono del argentino.
@@ -408,8 +386,6 @@ Junto a Xavi, Busquets es uno de los siete jugadores de la historia en ganar la 
 Después de pasar por las filas de Barcelona, con Pep Guardiola, el español ha seguido brillando tanto en el club como en la selección de su país, ganando seis títulos de la Liga, el Mundial de Sudáfrica 2010 y la Eurocopa del 2012. El carácter animoso de la estrella del Barcelona el valió el premio a Jugador del Año del club en la temporada 2014-2015.
 </summary>
 </article>
-</root>
-<root>
 <article>
 <text>
 Una nota que juraba lealtad a ISIS se salió del bolsillo del presunto <e1>atacante de París, a quienes las autoridades han identificado como Karim Cheurfi</e1>, dijo este viernes el fiscal de París Francois Molins.
