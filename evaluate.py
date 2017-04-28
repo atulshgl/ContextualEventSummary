@@ -59,10 +59,9 @@ def getListFromXML(text):
     articles = []
     tree = etree.fromstring(text)
     articleText = tree.xpath('//text')
-    print 'articleText',articleText
+    
     for at in articleText:
         if at.text:
-            print at.text
             aText = (at.text + ''.join(map(etree.tostring, at))).strip()
             aText = ('<text>' + aText + '</text>').encode('utf-8')
             cleantext = removeTags(aText)
@@ -115,8 +114,23 @@ def f1Score(predictedEvents,taggedEvents):
         F1 = 2*(precision * recall) / (precision + recall)
     else:
         F1 = None
+    return F1, [truePositive, tn, pn]
+
+
+def getF1Score(truePositive, tn, pn):
+    precision = truePositive / float(pn)
+    recall = truePositive / float(tn)
+
+
+    print 'precision', 'recall'
+    print precision, recall
+    print ''
+    if precision + recall > 0:
+        F1 = 2*(precision * recall) / (precision + recall)
+    else:
+        F1 = None
     return F1
-    
+
 '''
 driver code:
 
