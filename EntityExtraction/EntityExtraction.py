@@ -106,7 +106,7 @@ def correctTextBeginPosition(tokens):
 language_client = language.Client()
 
 # The text to analyze
-text = 'En el segundo día de la prueba de pretemporada de Barcelona, Fernando Alonso sufrió un accidente en el turno 3. Fue trasladado por aire al Hospital General de Catalunya en Sant Cugat del Vallès, donde se sometió a escáneres que descubrieron que había sufrido una conmoción cerebral. Después de recuperar la conciencia, algunos periódicos informaron que Alonso sufrió una amnesia retrógrada en la que no tenía recuerdos más allá de 1995 y creía que seguía siendo un piloto de karting'
+text = u'En el segundo día de la prueba de pretemporada de Barcelona, Fernando Alonso sufrió un accidente en el turno 3. Fue trasladado por aire al Hospital General de Catalunya en Sant Cugat del Vallès, donde se sometió a escáneres que descubrieron que había sufrido una conmoción cerebral. Después de recuperar la conciencia, algunos periódicos informaron que Alonso sufrió una amnesia retrógrada en la que no tenía recuerdos más allá de 1995 y creía que seguía siendo un piloto de karting'
 document = language_client.document_from_text(text, language='es', encoding=language.Encoding.UTF8)
 extractEntities(document)
 
