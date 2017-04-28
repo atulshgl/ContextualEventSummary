@@ -15,80 +15,9 @@ import json
 import codecs
 from textblob import TextBlob as tb
 from collections import defaultdict
-
-
-
-class spanishPOSTagger(object):
-    """A POS Tagger for spanish language. spanishPOSTagger has the
-    following properties:
-
-    Attributes:
-        jar: A string representing path to stanford POS tagger jar file.
-        model: A string represnting path to spanish tagger file.
-        tags: A list of word - POS tuples
-    """
-
-    def __init__(self, jar, model,tags = []):
-        """Return a spanishPOSTagger object."""
-        self.jar = jar
-        self.model = model
-        self.tags = tags
-
-    def tag(self, sentence):
-        """Return a list containing tokenized words and their POS tags."""
-        pos_tagger = StanfordPOSTagger(self.model, self.jar, encoding='utf8')
-        self.tags = pos_tagger.tag(word_tokenize(sentence))
-        return self.tags
-
-
-class spanishParser(object):
-    """A parser for spanish language. spanishParser has the
-    following properties:
-
-    Attributes:
-        esp_model_path: A string representing path to stanford spanish model file.
-        path_to_models_jar: A string represnting path to parser models jar file.
-        path_to_jar: A string representing path to stanford parser jar file.
-        phrase_list: A list of phrases of the given type.
-        parse_tree = A list iterator for the parsed sentence
-    """
-
-    def __init__(self, esp_model_path, path_to_models_jar, path_to_jar):
-        """Return a spanishParser object."""
-        self.esp_model_path = esp_model_path
-        self.path_to_models_jar = path_to_models_jar
-        self.path_to_jar = path_to_jar
-        self.phrase_list = []
-
-    def parse(self, sentence):
-        """Set the parse tree property for the given sentence."""
-        parser=StanfordParser(model_path=self.esp_model_path, path_to_models_jar=self.path_to_models_jar, path_to_jar=self.path_to_jar, encoding='utf8')
-        self.parse_tree = parser.raw_parse(sentence)
-        return self.parse_tree
-
-    def getPhrase(self,phrase_type):
-        """Return a list of phrases of the given type."""
-        parsestr = ''
-        for line in self.parse_tree:
-            for sentence in line:
-                parsestr += str(sentence)
-        
-        for i in Tree.fromstring(parsestr).subtrees():
-            if i.label() == phrase_type:
-                self.phrase_list.append(" ".join(str(x) for x in i.leaves()))
-        return self.phrase_list
-
-    def drawParseTree(self):
-        '''Draw GUI for the parse tree'''
-        for line in self.parse_tree:
-            for sentence in line:
-                sentence.draw()
-
-    def getTree(self):
-        return self.parse_tree
-
-
-
+from SpanishTagging import spanishPOSTagger
+from SpanishTagging import spanishParser
+    
 
 
 
@@ -153,7 +82,7 @@ class NeuralTest():
         self.idict={}
         self.setdict()
         self.cur_dir=""
-        self.infilename="Corpus.txt"
+        self.infilename="corpus.txt"
         self.topk=top
 
         
@@ -231,7 +160,7 @@ class NeuralTest():
         ctr=0
         sentences=[]
         for article in in_file:
-            
+            #print article
         
             if(ctr%2==0):
                 #print filename,text
@@ -266,25 +195,25 @@ class NeuralTest():
         ctr=0
         sentences=[]
         tsentences=[]
-        for article in in_file:
+        for  article in in_file:
+            #print article
             out_file.write('\n')
             
-        
-            if(ctr%2==0):
+            if(True): 
                 #print filename,text
                 sentences= article.split('.')
 
-
-            else:
-                print ctr/2
+                #print ctr/2
                 #print len(sentences)
                 candidates=[]
                 for i in range(len(sentences)):
+                    
                     sentence = sentences[i]
                     if(sentence!="\n"):
-                        print sentence
+                        #print sentence
                         sent = spanishPOSTagger(jar,model)
                         taglist= sent.tag(sentence)
+                        #print taglist
                         shinglesize=5
                         for i in range(len(taglist)):
                             sentence_shingle=taglist[i:i+shinglesize]
@@ -322,12 +251,13 @@ class NeuralTest():
         for i in range(len(sentences)):
             sentence = sentences[i]
             if(sentence!="\n"):
-                print sentence
+                #print sentence
                 sent = spanishPOSTagger(jar,model)
                 taglist= sent.tag(sentence)
                 shinglesize=5
                 for i in range(len(taglist)):
                     sentence_shingle=taglist[i:i+shinglesize]
+                    #print sentence_shingle
                     stripped_shingle=[item[0] for item in sentence_shingle]
                     
                     value=self.getthinking(sentence_shingle,NN)
@@ -338,7 +268,7 @@ class NeuralTest():
 
         print "-----------------------------------------"
         returnlist=[]
-        for i in range(len(candidates[-3:])):
+        for i in range(len(candidates[-7:])):
             returnlist.append(' '.join(candidates[i][0]))
             print ' '.join(candidates[i][0])
         print "-----------------------------------------"
@@ -355,7 +285,8 @@ class NeuralTest():
 if __name__ == "__main__":
 
     #Intialise a single neuron neural network.
-    test=NeuralTest()
-    test.test()
 
+    test=NeuralTest()
+    #test.test()
+    test.testtext("The turkish riots of 1965 were incited by protestors rallying against Erdogan.")
 
