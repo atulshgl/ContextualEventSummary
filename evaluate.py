@@ -36,7 +36,15 @@ def getEventList(events):
         for tag, event in article.iteritems():
             x.append(event)
         eventList.append(x)
-    return eventList            
+    return eventList
+
+def getSummaryList(text):
+    summary = []
+    for article in ET.fromstring(text):
+        for text in article:
+            if text.tag == 'summary':
+                summary.append(text.text)
+    return summary
 
 
 def substringSieve(string_list):
@@ -55,15 +63,15 @@ def getTextFromXML(filepath):
 def removeTags(text):
     return ''.join(ET.fromstring(text).itertext())
 
-def getListFromXML(text):
+def getListFromXML(text,label):
     articles = []
     tree = etree.fromstring(text)
-    articleText = tree.xpath('//text')
+    articleText = tree.xpath('//' + label)
     
     for at in articleText:
         if at.text:
             aText = (at.text + ''.join(map(etree.tostring, at))).strip()
-            aText = ('<text>' + aText + '</text>').encode('utf-8')
+            aText = ('<' + label + '>' + aText + '</' + label + '>').encode('utf-8')
             cleantext = removeTags(aText)
             articles.append(cleantext)
   

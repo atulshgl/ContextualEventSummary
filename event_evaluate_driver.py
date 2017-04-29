@@ -18,7 +18,7 @@ if __name__ == "__main__":
     corpusText = test.getTextFromXML(trainingFile)
 
     ## Get articles from the XML test corpus
-    articleList = test.getListFromXML(text.encode('utf-8'))
+    articleList = test.getListFromXML(text.encode('utf-8'),'text')
     
     taggedEvents = test.getEventList(test_events)
 
